@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "event-based-bos"
+version = "0.1.0"
+description = ""
+authors = [""]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"
+torch = "1.12.1"
+torchvision = "0.13.1"
+scipy = "1.9.1"
+optuna = "^2.10.0"
+opencv-python = "^4.5.3"
+matplotlib = "^3.5.3"
+plotly = "^5.10.0"
+ffmpeg-python = "^0.2.0"
+h5py = "^3.7.0"
+hdf5plugin = "^3.3.1"
+PyYAML = "^6.0"
+Pillow = "^9.2.0"
+sklearn = "^0.0"
+scikit-image = "^0.19.3"
+argparse = "^1.4.0"
+pivpy = "^0.0.15"
+OpenPIV = "^0.24.2"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+black = "^22.3"
+mypy = "^0.910"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 119
+
