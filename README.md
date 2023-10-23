@@ -1,4 +1,4 @@
-# Event-based Background-Oriented Schlieren (T-PAMI 2023)
+# Event-based Background-Oriented Schlieren
 
 This is the official repository for **Event-based Background-Oriented Schlieren**, **IEEE T-PAMI 2023** by  
 [Shintaro Shiba](http://shibashintaro.com/), [Friedhelm Hamann](https://friedhelmhamann.github.io/), [Yoshimitsu Aoki](https://aoki-medialab.jp/aokiyoshimitsu-en/) and [Guillermo Callego](https://sites.google.com/view/guillermogallego).
@@ -16,7 +16,7 @@ If you use this work in your research, please cite it (see also [here](#citation
 @Article{Shiba23pami,
   author        = {Shintaro Shiba and and Friedhelm Hamann and Yoshimitsu Aoki and Guillermo Gallego},
   title         = {Event-based Background-Oriented Schlieren},
-  booktitle     = {IEEE T-PAMI},
+  booktitle     = {IEEE Trans. Pattern Anal. Mach. Intell. (T-PAMI)},
   pages         = {},
   doi           = {},
   year          = 2023
@@ -66,11 +66,11 @@ This install dev dependencies (format, test) too.
 ## Download dataset
 
 Please download the dataset and put into your local folder.
-The structure of the foloder is as follows:
+The structure of the folder is as follows:
 
 ```shell
 (root)/datasets/
-    CCS/   # fixed keyword: dataset recorded with the co-capture system.
+    CCS/   # fixed keyword: dataset recorded with the co-capture system (CCS).
         (sequence_name)/
             basler_0/
                 frames.mp4          # frame data
@@ -82,11 +82,11 @@ The structure of the foloder is as follows:
             homography.txt          # calibration file
 ```
 
-## CCS Dataset
+## EBOS dataset recorded with Co-Capture System (CCS)
 
 The Prophesee camera provides `.raw` format file, which requires to install `OpenEB`.
 We converted this file into hdf5 file formats for better compatibility among languages and OS.
-So, you don't need to install OpenEB.
+So, there is no need to install OpenEB.
 
 # Execution
 
@@ -121,7 +121,7 @@ make fmt
 ```shell
 make test
 ```
-
+<!--
 # Citation
 
 If you use this work in your research, please cite it as follows:
@@ -136,6 +136,7 @@ If you use this work in your research, please cite it as follows:
   year          = 2023
 }
 ```
+-->
 
 # Code Authors
 
