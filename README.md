@@ -30,6 +30,8 @@ If you use this work in your research, please cite it (see also [here](#citation
 
 - python: 3.8.x, 3.9.x, 3.10.x
 
+- [ffmpeg](https://ffmpeg.org/) ... This is necessary for `ffmpeg-python`.
+
 ### Tested environments
 
 - Mac OS Monterey (both M1 and non-M1)
@@ -38,22 +40,87 @@ If you use this work in your research, please cite it (see also [here](#citation
 
 ## Installation
 
-I strongly recommend to use venv: `python3 -m venv <new_venv_path>`
-Also, you can use [poetry]().
+### Quick setup
 
-- Install pytorch **< 1.13** or **>= 2.0** and torchvision for your environment. Make sure you install the correct CUDA version if you want to use it.
+Minimal quick setup is to use [venv](https://docs.python.org/3/library/venv.html).
 
-- If you use poetry, `poetry install`. If you use only venv, check dependecy libraries and install it from [here](./pyproject.toml).
+```shell
+python3 -m venv ~/work/venv
+source ~/work/venv/bin/activate  # activate env
+python3 -V  # make sure the version, 3.8 or higher
+pip3 install scipy==1.9.1 optuna==2.10.1 opencv-python matplotlib plotly \
+ffmpeg-python h5py hdf5plugin PyYAML Pillow sklearn scikit-image argparse openpiv \
+torch torchvision black isort kaleido
+```
 
-- If you are having trouble to install pytorch with cuda using poetry refer to this [link](https://github.com/python-poetry/poetry/issues/6409). 
+### Full setup
+
+You can use [poetry](https://python-poetry.org/docs/).
+
+```shell
+poetry install
+```
+
+This install dev dependencies (format, test) too.
 
 ## Download dataset
 
-Download each dataset under `./datasets` directory.
+Please download the dataset and put into your local folder.
+The structure of the foloder is as follows:
+
+```shell
+(root)/datasets/
+    CCS/   # fixed keyword: dataset recorded with the co-capture system.
+        (sequence_name)/
+            basler_0/
+                frames.mp4          # frame data
+                config.yaml
+            prophesee_0/
+                cd_events.raw       # event data in .raw format (Prophesee)
+                events.hdf5         # event data converted in HDF5 format
+                trigger_events.txt
+            homography.txt          # calibration file
+```
+
+## CCS Dataset
+
+The Prophesee camera provides `.raw` format file, which requires to install `OpenEB`.
+We converted this file into hdf5 file formats for better compatibility among languages and OS.
+So, you don't need to install OpenEB.
 
 # Execution
 
-TBD.
+## Run
+
+An example is:
+
+```shell
+python3 bos_event.py --config_file ./configs/exp_table1/ours/73.yaml --eval
+```
+
+## Config
+
+The configuration for each experiment is provided to the script through yaml files.
+
+Please see the [readme](./configs/README.md).
+
+## Development
+
+Note you use poetry for development.
+
+## Format
+
+You can quickly run format of the codes:
+
+```shell
+make fmt
+```
+
+## Test
+
+```shell
+make test
+```
 
 # Citation
 
