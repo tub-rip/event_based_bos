@@ -3,9 +3,10 @@
 This is the official repository for **Event-based Background-Oriented Schlieren**, **IEEE T-PAMI 2023** by  
 [Shintaro Shiba](http://shibashintaro.com/), [Friedhelm Hamann](https://friedhelmhamann.github.io/), [Yoshimitsu Aoki](https://aoki-medialab.jp/aokiyoshimitsu-en/) and [Guillermo Callego](https://sites.google.com/view/guillermogallego).
 
-
-[[Video](https://youtu.be/v6ms6g2eOB8)] [[Dataset](https://drive.google.com/drive/folders/1kMnCKRI6QE8AmtxXe_jU9DTjlMbldpZM?usp=sharing)] [[PDF](https://ieeexplore.ieee.org/document/10301562/)]
- [[arXiv]()]
+<h2 align="left">
+  
+[Paper](https://arxiv.org/pdf/2311.00434) | [Video](https://youtu.be/v6ms6g2eOB8) | [Dataset](https://drive.google.com/drive/folders/1kMnCKRI6QE8AmtxXe_jU9DTjlMbldpZM?usp=sharing)
+</h2>
 
 [![Event-based Background-Oriented Schlieren](docs/img/event_based_bos_pami23.jpg)](https://youtu.be/v6ms6g2eOB8)
 
