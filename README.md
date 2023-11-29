@@ -5,7 +5,7 @@ This is the official repository for **Event-based Background-Oriented Schlieren*
 
 <h2 align="left">
   
-[Paper](https://arxiv.org/pdf/2311.00434) | [Video](https://youtu.be/v6ms6g2eOB8) | [Dataset](https://drive.google.com/drive/folders/1kMnCKRI6QE8AmtxXe_jU9DTjlMbldpZM?usp=sharing)
+[Paper](https://arxiv.org/pdf/2311.00434) | [Video](https://youtu.be/v6ms6g2eOB8) | [Dataset](https://doi.org/10.14279/depositonce-19492)
 </h2>
 
 [![Event-based Background-Oriented Schlieren](docs/img/event_based_bos_pami23.jpg)](https://youtu.be/v6ms6g2eOB8)
@@ -66,7 +66,7 @@ This install dev dependencies (format, test) too.
 
 ## Download dataset
 
-Please download the dataset and put into your local folder.
+Please download the dataset and put into your local folder. You can download the files from [the official source](https://doi.org/10.14279/depositonce-19492) or [Google Drive](https://drive.google.com/drive/folders/1kMnCKRI6QE8AmtxXe_jU9DTjlMbldpZM?usp=sharing)
 The structure of the folder is as follows:
 
 ```shell
