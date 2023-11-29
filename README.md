@@ -160,3 +160,4 @@ TBD
 * [Course at TU Berlin](https://sites.google.com/view/guillermogallego/teaching/event-based-robot-vision)
 * [Survey paper](http://rpg.ifi.uzh.ch/docs/EventVisionSurvey.pdf)
 * [List of Resources](https://github.com/uzh-rpg/event-based_vision_resources)
+* [CoCapture: GUI for recording with multi camera systems.](https://github.com/tub-rip/CoCapture)
