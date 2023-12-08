@@ -117,11 +117,6 @@ You can quickly run format of the codes:
 make fmt
 ```
 
-## Test
-
-```shell
-make test
-```
 <!--
 # Citation
 
