@@ -96,7 +96,7 @@ So, there is no need to install OpenEB.
 An example is:
 
 ```shell
-python3 bos_event.py --config_file ./configs/exp_table1/ours/73.yaml --eval
+python3 bos_event.py --config_file ./configs/hot_plate1.yaml --eval
 ```
 
 ## Config

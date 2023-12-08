@@ -1,0 +1,121 @@
+data:
+  root: ""   # empty string assumes (repository_root)/datasets.
+  dataset: "CCS"
+  sequence: "hot_plate1"
+  height: 720
+  width: 1280
+  warp: true
+
+output_dir: "./outputs/exp/ccs/73"
+
+###############
+# Common parameters
+###############
+evaluation:
+  metrics:
+    - "flow"  # AEE, AE, NPE
+  time_list:   # list of time indices to evaluate in the data.
+    - [10., 14.]
+
+# General parameters for the script
+common_params:
+  n_frames: 1    # How many concurrent frames to compare
+  xmin: 0
+  xmax: 720
+  ymin: 320
+  ymax: 960
+
+###############
+# Event-based BOS solver
+###############
+solver:
+  # Required
+  filter:  # Event preprocessing: filter for event procssing: nothing used for frame analysis.
+    filters:
+      # - "BAF"  # Background Activity Filter
+      # - "HOT"  # Remove hot pixels
+    parameters:
+      BAF_dt: 0.005  # sec
+      BAF_ksize: 1   # pix
+      BAF_num_support_event: 1
+      BAF_continuous_update: true
+      HOT_thresh: 10
+
+  method: "patch_eklt_pyramid2"
+  # Optional below: used by cmax-based methods
+  warp_direction: "first"
+  motion_model: "2d-translation"
+  parameters:
+    - "trans_x"
+    - "trans_y"
+  cost: "hybrid"
+  outer_padding: 0
+  cost_with_weight:
+    # charbonnier: 10.
+    # total_variation: 3.0
+    # flow_norm: 0.01
+    diff_norm: 1.
+    # total_variation: 3.0
+    image_gradient: 0.5
+    # total_variation_intensity: 1.0
+    flow_norm_pxy: 0.1
+    # flow_norm: 0.05
+  iwe:
+    method: "bilinear_vote"
+    blur_sigma: 3
+  optimizer:
+    # method: "Newton-CG"
+    method: "Adam"
+    # sampler: "random"
+    n_iter: 600
+    parameters:
+      angle:
+        min: 0
+        max: 6.2832
+      p_x:
+        min: -0.4
+        max: 0.4
+      p_y:
+        min: -0.4
+        max: 0.4
+  generative_ml:
+    weight_loss_by_event_hist: false
+    weight_sigma: 5
+    weight_loss_by_inverse_event_hist: true
+    optimize_warp: true
+    iwe_sigma: 2
+    viz_diff_scale: [-0.25, 0.25]
+    no_polarity: false
+    model_image: "current" # from "background" and "current"
+    # use_log_intensity: false
+    use_log_intensity: false
+    # angle_model: true
+    poisson_model: true
+  patch_eklt:
+    patch_size: 4
+    sliding_window: 2
+    do_event_thresholding: false
+    event_thres: 8
+
+method: "opencv_flow"
+estimation_method: "solver"
+
+# Dense optical flow estimation. Parameters for cv2.calcOpticalFlowFarneback
+params_opencv_flow:
+  pyr_scale: 0.5
+  levels: 4
+  winsize: 10
+  iterations: 3
+  poly_n: 5
+  poly_sigma: 1.2
+  flags: 0
+
+# Parameters for OpenPIV method pipeline from Settles and Liberzon 2022.
+# Please see utils/config_utils for futher available options.
+params_openpiv:
+  # ROI: [30, 230, 40, 270]   # duplicated, script_params xmin etc are used now.
+  deformation_method: "symmetric"  # "symmetric" or  "second image"
+  windowsizes: [64, 32, 16, 8]      # add the interrogation window size for each pass.
+  overlap: [32, 16, 8, 4]    # For the moment, it should be a power of 2
+  MinMax_U_disp: [-20, 20]
+  MinMax_V_disp: [-20, 20]
