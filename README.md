@@ -5,7 +5,7 @@ This is the official repository for **Event-based Background-Oriented Schlieren*
 
 <h2 align="left">
   
-[Paper](https://arxiv.org/pdf/2311.00434) | [Video](https://youtu.be/S_KhftEVfjY) | [Dataset](https://doi.org/10.14279/depositonce-19492) | [News](https://www.tu.berlin/ueber-die-tu-berlin/profil/pressemitteilungen-nachrichten/schlierenfotografie)
+[Paper](https://arxiv.org/pdf/2311.00434) | [Video](https://youtu.be/S_KhftEVfjY) | [Dataset](https://doi.org/10.14279/depositonce-19492) | [News](https://www.tu.berlin/en/about/profile/press-releases-news/schlierenfotografie)
 </h2>
 
 [![Event-based Background-Oriented Schlieren](docs/img/event_based_bos_pami23.jpg)](https://youtu.be/S_KhftEVfjY)
