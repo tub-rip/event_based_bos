@@ -1,6 +1,6 @@
 # Event-based Background-Oriented Schlieren
 
-This is the official repository for **Event-based Background-Oriented Schlieren**, **IEEE T-PAMI 2023** by  
+This is the official repository for [**Event-based Background-Oriented Schlieren**](https://doi.org/10.1109/TPAMI.2023.3328188), **IEEE T-PAMI 2023** by  
 [Shintaro Shiba](http://shibashintaro.com/), [Friedhelm Hamann](https://friedhelmhamann.github.io/), [Yoshimitsu Aoki](https://aoki-medialab.jp/aokiyoshimitsu-en/) and [Guillermo Callego](https://sites.google.com/view/guillermogallego).
 
 <h2 align="left">
@@ -17,10 +17,12 @@ If you use this work in your research, please cite it (see also [here](#citation
 @Article{Shiba23pami,
   author        = {Shintaro Shiba and and Friedhelm Hamann and Yoshimitsu Aoki and Guillermo Gallego},
   title         = {Event-based Background-Oriented Schlieren},
-  booktitle     = {IEEE Trans. Pattern Anal. Mach. Intell. (T-PAMI)},
-  pages         = {},
-  doi           = {10.1109/TPAMI.2023.3328188},
-  year          = 2023
+  journal       = {IEEE Trans. Pattern Anal. Mach. Intell. (T-PAMI)},
+  year          = {2024},
+  volume        = {46},
+  number        = {4},
+  pages         = {2011-2026},
+  doi           = {10.1109/TPAMI.2023.3328188}
 }
 ```
 
