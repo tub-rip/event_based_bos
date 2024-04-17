@@ -15,7 +15,7 @@ If you use this work in your research, please cite it (see also [here](#citation
 
 ```bibtex
 @Article{Shiba23pami,
-  author        = {Shintaro Shiba and and Friedhelm Hamann and Yoshimitsu Aoki and Guillermo Gallego},
+  author        = {Shintaro Shiba and Friedhelm Hamann and Yoshimitsu Aoki and Guillermo Gallego},
   title         = {Event-based Background-Oriented Schlieren},
   journal       = {IEEE Trans. Pattern Anal. Mach. Intell. (T-PAMI)},
   year          = {2024},
