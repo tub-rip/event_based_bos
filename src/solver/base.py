@@ -186,14 +186,6 @@ class SolverBase(object):
         self.visualizer.visualize_image(clipped_iwe)
         if warp is not None:
             self.visualizer.visualize_optical_flow_on_event_mask(flow, events)
-            self.visualizer.visualize_3d_interactive_event_warp(
-                events,
-                motion_model=self.motion_model,
-                flow=flow,
-                motion=warp,
-                direction=self.warp_direction,
-                calib_param=self.orig_warper.get_calib_param_if_necessary(self.motion_model),
-            )
 
     def visualize_one_batch_warp_gt(
         self, events: np.ndarray, gt_warp: np.ndarray, motion_model: str = "dense-flow"

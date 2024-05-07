@@ -50,55 +50,6 @@ class FeatureCalculatorMock:
         return self.skip()
 
 
-def prepare_pseudo_event_warp(
-    t: float,
-    image_size: tuple,
-    motion: np.ndarray,
-    motion_model: str,
-    direction: str = "first",
-    cell: int = 5,
-    calib_param: Optional[np.ndarray] = None,
-    calculate_feature: bool = True,
-):
-    """Warp event based on t=t at every cell.
-
-    Args:
-        t (float): [description]
-        image_size (tuple): [description]
-        motion (np.ndarray): [description]
-        motion_model (str): [description]
-        direction (str, optional): [description]. Defaults to "first".
-        cell (int, optional): [description]. Defaults to 5.
-
-    Returns:
-        [type]: [description]
-    """
-    x_range = np.arange(0, image_size[0], cell)
-    y_range = np.arange(0, image_size[1], cell)
-    nx = len(x_range)
-    ny = len(y_range)
-    events = prepare_pseudo_event(x_range, y_range, t)
-
-    warper = Warp(
-        image_size, calculate_feature=calculate_feature, normalize_t=False, calib_param=calib_param
-    )
-    warped_events, feat = warper.warp_event(events, motion, motion_model, direction=direction)
-    warped_events = warped_events[1:]
-    assert is_numpy(warped_events)
-    t = warped_events[:, 2].reshape(ny, nx)
-    x = warped_events[:, 0].reshape(ny, nx)
-    y = warped_events[:, 1].reshape(ny, nx)
-    if calculate_feature:
-        for (k, v) in feat.items():
-            if v["value"] is not None and v["per_event"]:
-                v["value"] = v["value"][1:].reshape(ny, nx)
-    return x, y, t, feat
-
-
-def prepare_pseudo_event(x_range, y_range, t):
-    events = np.array([[x, y, t, 1] for y in y_range for x in x_range])
-    events = np.concatenate([np.array([[0, 0, 0, 0]]), events])
-    return events
 
 
 class Warp(object):
