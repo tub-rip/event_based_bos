@@ -350,7 +350,6 @@ if __name__ == "__main__":
     else:  # No evaluation, just running sequential BOS estimation.
         estimate_sequential(config, loader, solv)
         # accumulate_sequential(config, loader, solv)
-    utils.send_slack_notif(additional_message=f"Sequence: {data_config['sequence']}")
 
     # Make video
     for v in solv.sequential_video_list:
