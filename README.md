@@ -1,7 +1,7 @@
 # Event-based Background-Oriented Schlieren
 
 This is the official repository for [**Event-based Background-Oriented Schlieren**](https://doi.org/10.1109/TPAMI.2023.3328188), **IEEE T-PAMI 2023** by  
-[Shintaro Shiba](http://shibashintaro.com/), [Friedhelm Hamann](https://friedhelmhamann.github.io/), [Yoshimitsu Aoki](https://aoki-medialab.jp/aokiyoshimitsu-en/) and [Guillermo Callego](https://sites.google.com/view/guillermogallego).
+[Shintaro Shiba](http://shibashintaro.com/), [Friedhelm Hamann](https://friedhelmhamann.github.io/), [Yoshimitsu Aoki](https://aoki-medialab.jp/aokiyoshimitsu-en/) and [Guillermo Callego](http://www.guillermogallego.es).
 
 <h2 align="left">
   
@@ -145,16 +145,17 @@ If you use this work in your research, please cite it as follows:
 
 Please check [License](./LICENSE).
 
-## Acknowledgement
-
-TBD
-
 -------
 # Additional Resources
 
+* [CoCapture: GUI for recording with multi camera systems.](https://github.com/tub-rip/CoCapture)
+* [Secrets of Event-Based Optical Flow (TPAMI 2024)](https://github.com/tub-rip/event_based_optical_flow)
+* [Motion-prior Contrast Maximization (ECCV 2024)](https://github.com/tub-rip/MotionPriorCMax)
+* [Event Collapse in Contrast Maximization Frameworks](https://github.com/tub-rip/event_collapse)
+* [EVILIP: Event-based Image Reconstruction as a Linear Inverse Problem (TPAMI 2022)](https://github.com/tub-rip/event_based_image_rec_inverse_problem)
+* [EPBA: Event-based Photometric Bundle Adjustment](https://github.com/tub-rip/epba)
 * [Research page (TU Berlin, RIP lab)](https://sites.google.com/view/guillermogallego/research/event-based-vision)
 * [Research page (Keio University, Aoki Media Lab)](https://aoki-medialab.jp/home-en/)
 * [Course at TU Berlin](https://sites.google.com/view/guillermogallego/teaching/event-based-robot-vision)
 * [Survey paper](http://rpg.ifi.uzh.ch/docs/EventVisionSurvey.pdf)
 * [List of Resources](https://github.com/uzh-rpg/event-based_vision_resources)
-* [CoCapture: GUI for recording with multi camera systems.](https://github.com/tub-rip/CoCapture)
